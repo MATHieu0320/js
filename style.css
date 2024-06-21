@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.padding {
+  padding: 5%;
+}
+.App {
+  height: 923px;
+  position: relative;
+  width: 479px;
+
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+}
+#btn1 {
+  z-index: 5;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.categories-container {
+  background-color: rgb(226, 213, 213);
+  height: 90px;
+}
+.blur {
+  filter: blur(1.5rem);
+}
+.Information {
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  filter: blur(0rem);
+  height: 400px;
+  position: absolute;
+  width: 331px;
+}
