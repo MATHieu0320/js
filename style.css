@@ -15,6 +15,7 @@
 }
 nav {
   display: flex;
+  backdrop-filter: blur(15px);
 
   justify-content: space-between;
 }
@@ -24,26 +25,41 @@ h1 {
 }
 #btn1 {
   z-index: 5;
+  cursor: pointer;
 }
 .categories {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  z-index: -1;
+  position: relative;
 }
 .categories-container {
   background-color: rgb(226, 213, 213);
   height: 90px;
 }
-.blur {
-  filter: blur(1.5rem);
-}
+
 .Information {
+  text-align: center;
+  z-index: 5;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: red;
-  filter: blur(0rem);
+  background-color: rgba(205, 155, 155, 0.657);
+
   height: 400px;
   position: absolute;
   width: 331px;
+  filter: blur(0rem);
+  z-index: 15;
+}
+.blur {
+  cursor: pointer;
+}
+.test {
+  backdrop-filter: 2rem;
+}
+h4 {
+  backdrop-filter: 0;
+  z-index: 5;
 }

@@ -4,34 +4,40 @@ console.log(btn1);
 const PremierElement = document.querySelector("#cat1");
 console.log(btn1);
 let div = document.createElement("div");
+// function TrueOrFalse(bouleen,element,class) {
+//   if (bouleen == true) {
+//     bouleen = false;
+
+//   } else {
+//     bouleen = true;
+//   }
+// }
+
 app.appendChild(div);
 let bouleen = true;
+
 btn1.addEventListener("click", () => {
-
-
-  app.classList.toggle("blur");
-
-  //////////////////////
-
   if (bouleen == true) {
-    bouleen = false;
-    div.classList.add("Information");
+    app.classList.add("blur");
 
-    console.log("vrai");
+    div.classList.add("Information");
+    div.innerHTML = `
+  <h2>Bonsoir</h2>`;
+    bouleen = false;
   } else {
-    console.log("faux");
     bouleen = true;
 
+    div.innerHTML = "";
     div.classList.remove("Information");
   }
 });
-document.body.addEventListener("click", (e) => {
-  console.log(e.target);
+
+app.addEventListener("click", (e) => {
+  if (e.target != btn1) {
+    div.innerHTML = "";
+
+    bouleen = true;
+    div.classList.remove("Information");
+    app.classList.remove("blur");
+  }
 });
-// if (bouleen == true) {
-//   bouleen = false;
-//   h1.style.background = "green";
-// } else {
-//   bouleen = true;
-//   h1.style.background = "red";
-// }
